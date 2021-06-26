@@ -8,6 +8,8 @@ const fs = require('fs');
 
 const prefix = '&';
 
+const discordToken = 'INSERT TOKEN';
+
 client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -50,4 +52,4 @@ client.on('message', async message => {
     }
 });
 
-client.login('ODIxNzUwMjMxNTM2MjM4NjMy.YFIQig.On-lEYJG3cR_o2JQemeX2O6XQiA');
+client.login(discordToken);
